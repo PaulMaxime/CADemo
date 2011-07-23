@@ -3,11 +3,33 @@
 //  CADemo
 //
 //  Created by Paul Franceus on 7/20/11.
-//  Copyright 2011 Google, Inc. All rights reserved.
+//
+//  MIT License
+//
+//  Copyright (c) 2011 Paul Franceus
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
 #import "CardLayoutView.h"
 #import "DemoCardView.h"
+#import "GraphicsUtils.h"
 
 @interface CardLayoutView ()
 
@@ -66,19 +88,19 @@
 - (void)updateCircle {
   CGRect bounds = self.bounds;
   NSUInteger index = 0;
-  subviewSize_ = CGSizeMake(100, 100);
-  
+    
   [UIView beginAnimations:@"circleView" context:NULL];
   [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
   [UIView setAnimationDuration:animationDuration_];
   
-  CGFloat midx = CGRectGetMidX(bounds);
-  CGFloat midy = CGRectGetMidY(bounds);
-  CGPoint center = CGPointMake(midx, midy);
+  CGPoint center = [GraphicsUtils centerOfRect:bounds];
   CGSize size = bounds.size;
   CGFloat offset = 0.5 * MIN(size.width - subviewSize_.width - inset_.width,
                              size.height - subviewSize_.height - inset_.height);
-    
+  
+  // This is pure laziness. I should figure out the correct size based on the screen size.
+  subviewSize_ = CGSizeMake(125, 125);
+
   NSArray *newViews = [self viewsFromDataSource];
   CGFloat angle = 2 * M_PI / [newViews count];
   for (DemoCardView *view in newViews) {
@@ -87,8 +109,11 @@
       CGFloat yOffset = offset * sinf(angle * index);
       
       view.center = CGPointMake(center.x + xOffset, center.y + yOffset);
-      view.bounds = CGRectMake(0, 0, subviewSize_.width, subviewSize_.height);
-      view.transform = CGAffineTransformMakeRotation(angle * index);
+      CGRect newBounds = CGRectMake(0, 0, subviewSize_.width, subviewSize_.height);
+      CGFloat scale = [GraphicsUtils scaleForSize:view.bounds.size inRect:newBounds];
+      CGAffineTransform scaleAndRotate =
+          CGAffineTransformRotate(CGAffineTransformMakeScale(scale, scale), angle * index + M_PI_2);
+      view.transform = scaleAndRotate;
       
       if (![self.subviews containsObject:view]) {
         [self addSubview:view];
@@ -102,8 +127,10 @@
 - (void)updateGrid {
   CGRect bounds = self.bounds;
   
-  subviewSize_.width = (bounds.size.width - (2 * inset_.width) - ((columns_ - 1) * spacing_.width)) / columns_;
-  subviewSize_.height = (bounds.size.height - (2 * inset_.height) - ((rows_ - 1) * spacing_.height)) / rows_;
+  subviewSize_.width = (bounds.size.width - (2 * inset_.width) - ((columns_ - 1) * spacing_.width))
+      / columns_;
+  subviewSize_.height = (bounds.size.height - (2 * inset_.height) - ((rows_ - 1) * spacing_.height))
+      / rows_;
   NSUInteger index = 0;
   
   [UIView beginAnimations:@"gridView" context:NULL];
@@ -117,15 +144,16 @@
       NSUInteger col = index % columns_;
       row = row % rows_;
       
+      // Compute the new rect 
       CGRect newFrame = CGRectMake(
           inset_.width + col * (subviewSize_.width + spacing_.width),
           inset_.height + row * (subviewSize_.height + spacing_.height),
           subviewSize_.width, subviewSize_.height);
       
-      view.center = CGPointMake(newFrame.origin.x + 0.5 * newFrame.size.width,
-                                newFrame.origin.y + 0.5 * newFrame.size.height);
-      view.bounds = CGRectMake(0, 0, newFrame.size.width, newFrame.size.height);
-      view.transform = CGAffineTransformIdentity;
+      // Use the transform to resize the view. Move it by setting the center.
+      CGFloat scale = [GraphicsUtils scaleForSize:self.bounds.size inRect:newFrame];
+      view.center = [GraphicsUtils centerOfRect:newFrame];
+      view.transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale);
       
       if (![self.subviews containsObject:view]) {
         [self addSubview:view];

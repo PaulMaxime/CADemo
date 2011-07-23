@@ -3,7 +3,28 @@
 //  CADemo
 //
 //  Created by Paul Franceus on 7/20/11.
-//  Copyright 2011 Google, Inc. All rights reserved.
+//
+//  MIT License
+//
+//  Copyright (c) 2011 Paul Franceus
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
 #import "CardLayoutViewController.h"
@@ -67,15 +88,18 @@
                                                   target:self
                                                   action:@selector(loadSettingsPopover)];
   self.navigationItem.rightBarButtonItem = settingsItem_;
-  CGRect cardFrame = CGRectMake(0, 0, 200, 200);
+  
+  // Every view is always sized to fit the screen. If it's shrunk, it's due to the view transform.
+  CGRect layoutFrame = cardLayoutView_.frame;
+  CGRect cardFrame = CGRectMake(0, 0, layoutFrame.size.width - 40, layoutFrame.size.height - 148);
   for (int i = 0; i < 12; i++) {
     DemoCardView *cardView = [[[DemoCardView alloc] initWithFrame:cardFrame] autorelease];
     cardView.parentController = self;
     cardView.demoView = [[UIView alloc] initWithFrame:cardFrame];
-    cardView.demoView.backgroundColor = [UIColor colorWithHue:.5 saturation:.5 brightness:.5 alpha:1];
+    cardView.demoView.backgroundColor = [UIColor colorWithHue:.6 saturation:.5 brightness:.5 alpha:1];
     [cardViews_ addObject:cardView];
   }
-  ((DemoCardView *)[cardViews_ objectAtIndex:8]).demoView =
+  ((DemoCardView *)[cardViews_ objectAtIndex:2]).demoView =
       [[SublayerTransformView alloc] initWithFrame:cardFrame];
   [cardLayoutView_ setNeedsLayout];
 }
@@ -126,6 +150,9 @@
                                          duration:(NSTimeInterval)duration {
   cardLayoutView_.animationDuration = duration;
   [self setParametersForOrientation:toInterfaceOrientation];
+  
+  // TODO: Set the bounds of all the views to the new shape.
+  
   [cardLayoutView_ setNeedsLayout];
 }
 

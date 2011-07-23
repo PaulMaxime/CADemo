@@ -1,7 +1,8 @@
 //
-//  GIPDismissControl.h
+//  GraphicsUtils.h
+//  CADemo
 //
-//  Created by Paul Franceus on 7/20/11.
+//  Created by Paul Franceus on 7/23/11.
 //
 //  MIT License
 //
@@ -28,33 +29,12 @@
 
 #import <Foundation/Foundation.h>
 
+@interface GraphicsUtils : NSObject
 
-// A generic dismiss control -- like the control in springboard that comes
-// up to delete applications.
-@interface DismissControl : UIView {
- @private
-  UIColor *textBackground_;
-  UIColor *textForeground_;
-  NSString *text_;
++ (CGFloat)scaleForSize:(CGSize)size inRect:(CGRect)rect;
 
-  UIColor *bezelColor_;
-  UIColor *targetColor_;
-  UIColor *targetBackgroundColor_;
++ (CGRect)centerSize:(CGSize)size inRect:(CGRect)rect;
 
-  id target_;
-  SEL action_;
-}
-
-@property(nonatomic, readwrite, retain) UIColor *textBackground;
-@property(nonatomic, readwrite, retain) UIColor *textForeground;
-@property(nonatomic, readwrite, copy) NSString *text;
-
-@property(nonatomic, readwrite, retain) UIColor *bezelColor;
-@property(nonatomic, readwrite, retain) UIColor *targetColor;
-@property(nonatomic, readwrite, retain) UIColor *targetBackgroundColor;
-
-@property(nonatomic, readwrite, retain) id target;
-
-- (void)setTarget:(id)target action:(SEL)sel;
++ (CGPoint)centerOfRect:(CGRect)rect;
 
 @end

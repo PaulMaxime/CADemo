@@ -1,7 +1,8 @@
 //
-//  GIPDismissControl.h
+//  GraphicsUtils.m
+//  CADemo
 //
-//  Created by Paul Franceus on 7/20/11.
+//  Created by Paul Franceus on 7/23/11.
 //
 //  MIT License
 //
@@ -26,35 +27,29 @@
 //  THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import "GraphicsUtils.h"
 
+@implementation GraphicsUtils
 
-// A generic dismiss control -- like the control in springboard that comes
-// up to delete applications.
-@interface DismissControl : UIView {
- @private
-  UIColor *textBackground_;
-  UIColor *textForeground_;
-  NSString *text_;
-
-  UIColor *bezelColor_;
-  UIColor *targetColor_;
-  UIColor *targetBackgroundColor_;
-
-  id target_;
-  SEL action_;
++ (CGFloat)scaleForSize:(CGSize)size inRect:(CGRect)rect {
+  CGFloat hScale = rect.size.width / size.width;
+  CGFloat vScale = rect.size.height / size.height;
+  
+  return  MIN(hScale, vScale);
 }
 
-@property(nonatomic, readwrite, retain) UIColor *textBackground;
-@property(nonatomic, readwrite, retain) UIColor *textForeground;
-@property(nonatomic, readwrite, copy) NSString *text;
++ (CGRect)centerSize:(CGSize)size inRect:(CGRect)rect {
+  CGFloat scale = [GraphicsUtils scaleForSize:size inRect:rect];
+  CGRect result;
+  result.size = CGSizeMake(size.width * scale, size.height * scale);
+  result.origin = CGPointMake(rect.origin.x + 0.5 * (rect.size.width - size.width),
+                              rect.origin.y + 0.5 * (rect.size.height - size.height));
+  return result;
+}
 
-@property(nonatomic, readwrite, retain) UIColor *bezelColor;
-@property(nonatomic, readwrite, retain) UIColor *targetColor;
-@property(nonatomic, readwrite, retain) UIColor *targetBackgroundColor;
-
-@property(nonatomic, readwrite, retain) id target;
-
-- (void)setTarget:(id)target action:(SEL)sel;
-
++ (CGPoint)centerOfRect:(CGRect)rect {
+  CGFloat midx = CGRectGetMidX(rect);
+  CGFloat midy = CGRectGetMidY(rect);
+  return CGPointMake(midx, midy);
+}
 @end

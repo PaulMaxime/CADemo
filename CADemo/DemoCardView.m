@@ -3,13 +3,35 @@
 //  CADemo
 //
 //  Created by Paul Franceus on 7/20/11.
-//  Copyright 2011 Google, Inc. All rights reserved.
+//
+//  MIT License
+//
+//  Copyright (c) 2011 Paul Franceus
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
 #import <QuartzCore/QuartzCore.h>
 
 #import "DemoCardView.h"
 #import "DismissControl.h"
+#import "GraphicsUtils.h"
 #import "CardLayoutViewController.h"
 
 @interface DemoCardView ()
@@ -56,15 +78,8 @@
 
 
 - (void)layoutSubviews {
-  [UIView beginAnimations:@"layout" context:NULL];
-  [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-  [UIView setAnimationDuration:0.4];
-  
-  CGRect newFrame = CGRectInset(self.bounds, 3, 3);
-  demoView_.bounds = CGRectMake(0, 0, newFrame.size.width, newFrame.size.height);
-  demoView_.center = CGPointMake(newFrame.origin.x + newFrame.size.width * 0.5,
-                            newFrame.origin.y + newFrame.size.height * 0.5);
-  [UIView commitAnimations];
+  demoView_.bounds = self.bounds;
+  demoView_.center = [GraphicsUtils centerOfRect:self.bounds];
 }
 
 
@@ -92,6 +107,7 @@
     [self.parentController.view insertSubview:dismissControl_
                                  belowSubview:self];
     [demoView_ setUserInteractionEnabled:YES];
+    [demoView_ startAnimating];
   }
 }
 
@@ -102,8 +118,8 @@
   // Make sure we are the topmost view.
   NSInteger cardCount = [self.parentController.cardViews count];
   [self.parentController.cardLayoutView insertSubview:self atIndex:cardCount - 1];
-   
-   CGRect layoutFrame = self.parentController.cardLayoutView.frame;
+  self.parentController.navigationItem.title = demoView_.displayName;
+  CGRect layoutFrame = self.parentController.cardLayoutView.frame;
   
   [UIView beginAnimations:@"zoom in" context:NULL];
   [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
@@ -111,9 +127,8 @@
   [UIView setAnimationDelegate:self];
   [UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
   
-  self.bounds = CGRectMake(0, 0, layoutFrame.size.width - 40, layoutFrame.size.height - 40);
-  self.center = CGPointMake(layoutFrame.origin.x + layoutFrame.size.width * 0.5,
-                            layoutFrame.origin.y + layoutFrame.size.height * 0.5);
+
+  self.center = [GraphicsUtils centerOfRect:layoutFrame];
   self.transform = CGAffineTransformIdentity;
 
   zoomedIn_ = YES;
@@ -122,6 +137,7 @@
 }
 
 - (void)dismissTapped {
+  [demoView_ stopAnimating];
   [demoView_ setUserInteractionEnabled:NO];
   [self addGestureRecognizer:tapRecognizer_];
   [dismissControl_ removeFromSuperview];

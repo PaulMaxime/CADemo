@@ -22,6 +22,7 @@
 		DAC10F7513D7C688001B0D3B /* CADemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC10F7413D7C688001B0D3B /* CADemoAppDelegate.m */; };
 		DAC10F7813D7C688001B0D3B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAC10F7613D7C688001B0D3B /* MainWindow.xib */; };
 		DAC10F8913D7C781001B0D3B /* CardLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC10F8813D7C781001B0D3B /* CardLayoutView.m */; };
+		DAD92AD913DB5CDD00F0309F /* GraphicsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD92AD813DB5CDD00F0309F /* GraphicsUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		DAC10F7713D7C688001B0D3B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		DAC10F8713D7C781001B0D3B /* CardLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardLayoutView.h; sourceTree = "<group>"; };
 		DAC10F8813D7C781001B0D3B /* CardLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardLayoutView.m; sourceTree = "<group>"; };
+		DAD92AD713DB5CDD00F0309F /* GraphicsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsUtils.h; sourceTree = "<group>"; };
+		DAD92AD813DB5CDD00F0309F /* GraphicsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicsUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,7 @@
 		DAC10F6A13D7C688001B0D3B /* CADemo */ = {
 			isa = PBXGroup;
 			children = (
+				DAD92AD513DB5A1000F0309F /* Utils */,
 				DA9C28C513DAA0A200EB187D /* Demo Control */,
 				DAC10F8613D7C721001B0D3B /* Demo Views */,
 				DAC10F7313D7C688001B0D3B /* CADemoAppDelegate.h */,
@@ -144,6 +148,15 @@
 				DA9C28C713DAA10000EB187D /* SublayerTransformView.m */,
 			);
 			name = "Demo Views";
+			sourceTree = "<group>";
+		};
+		DAD92AD513DB5A1000F0309F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DAD92AD713DB5CDD00F0309F /* GraphicsUtils.h */,
+				DAD92AD813DB5CDD00F0309F /* GraphicsUtils.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +230,7 @@
 				DA9C28C013DA7AFE00EB187D /* SettingsViewController.m in Sources */,
 				DA9C28C413DA853500EB187D /* DismissControl.m in Sources */,
 				DA9C28C813DAA10000EB187D /* SublayerTransformView.m in Sources */,
+				DAD92AD913DB5CDD00F0309F /* GraphicsUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
