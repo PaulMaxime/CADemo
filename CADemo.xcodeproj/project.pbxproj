@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA9C28BB13D9417800EB187D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9C28BA13D9417800EB187D /* QuartzCore.framework */; };
+		DA9C28C013DA7AFE00EB187D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9C28BE13DA7AFE00EB187D /* SettingsViewController.m */; };
+		DA9C28C413DA853500EB187D /* DismissControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9C28C213DA853400EB187D /* DismissControl.m */; };
+		DA9C28C813DAA10000EB187D /* SublayerTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9C28C713DAA10000EB187D /* SublayerTransformView.m */; };
+		DAB18E5013D7E07C0097C9D0 /* CardLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB18E4E13D7E07B0097C9D0 /* CardLayoutViewController.m */; };
+		DAB18E5113D7E07C0097C9D0 /* CardLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB18E4F13D7E07B0097C9D0 /* CardLayoutViewController.xib */; };
+		DAB18E5513D7E6170097C9D0 /* DemoCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB18E5413D7E6170097C9D0 /* DemoCardView.m */; };
 		DAC10F6513D7C688001B0D3B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC10F6413D7C688001B0D3B /* UIKit.framework */; };
 		DAC10F6713D7C688001B0D3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC10F6613D7C688001B0D3B /* Foundation.framework */; };
 		DAC10F6913D7C688001B0D3B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC10F6813D7C688001B0D3B /* CoreGraphics.framework */; };
@@ -14,25 +21,35 @@
 		DAC10F7113D7C688001B0D3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC10F7013D7C688001B0D3B /* main.m */; };
 		DAC10F7513D7C688001B0D3B /* CADemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC10F7413D7C688001B0D3B /* CADemoAppDelegate.m */; };
 		DAC10F7813D7C688001B0D3B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAC10F7613D7C688001B0D3B /* MainWindow.xib */; };
-		DAC10F7B13D7C688001B0D3B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC10F7A13D7C688001B0D3B /* RootViewController.m */; };
-		DAC10F7E13D7C688001B0D3B /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAC10F7C13D7C688001B0D3B /* RootViewController.xib */; };
+		DAC10F8913D7C781001B0D3B /* CardLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC10F8813D7C781001B0D3B /* CardLayoutView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA9C28BA13D9417800EB187D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DA9C28BD13DA7AFE00EB187D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		DA9C28BE13DA7AFE00EB187D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		DA9C28C213DA853400EB187D /* DismissControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissControl.m; sourceTree = "<group>"; };
+		DA9C28C313DA853400EB187D /* DismissControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissControl.h; sourceTree = "<group>"; };
+		DA9C28C613DAA10000EB187D /* SublayerTransformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SublayerTransformView.h; sourceTree = "<group>"; };
+		DA9C28C713DAA10000EB187D /* SublayerTransformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SublayerTransformView.m; sourceTree = "<group>"; };
+		DAB18E4D13D7E07B0097C9D0 /* CardLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardLayoutViewController.h; sourceTree = "<group>"; };
+		DAB18E4E13D7E07B0097C9D0 /* CardLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardLayoutViewController.m; sourceTree = "<group>"; };
+		DAB18E4F13D7E07B0097C9D0 /* CardLayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardLayoutViewController.xib; sourceTree = "<group>"; };
+		DAB18E5313D7E6170097C9D0 /* DemoCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoCardView.h; sourceTree = "<group>"; };
+		DAB18E5413D7E6170097C9D0 /* DemoCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoCardView.m; sourceTree = "<group>"; };
 		DAC10F6013D7C688001B0D3B /* CADemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CADemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC10F6413D7C688001B0D3B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DAC10F6613D7C688001B0D3B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DAC10F6813D7C688001B0D3B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DAC10F6C13D7C688001B0D3B /* CADemo-Info.plist */ = {isa = PBXFileReference; path = "CADemo-Info.plist"; sourceTree = "<group>"; };
+		DAC10F6C13D7C688001B0D3B /* CADemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CADemo-Info.plist"; sourceTree = "<group>"; };
 		DAC10F6E13D7C688001B0D3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DAC10F7013D7C688001B0D3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DAC10F7213D7C688001B0D3B /* CADemo-Prefix.pch */ = {isa = PBXFileReference; path = "CADemo-Prefix.pch"; sourceTree = "<group>"; };
-		DAC10F7313D7C688001B0D3B /* CADemoAppDelegate.h */ = {isa = PBXFileReference; path = CADemoAppDelegate.h; sourceTree = "<group>"; };
+		DAC10F7213D7C688001B0D3B /* CADemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CADemo-Prefix.pch"; sourceTree = "<group>"; };
+		DAC10F7313D7C688001B0D3B /* CADemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CADemoAppDelegate.h; sourceTree = "<group>"; };
 		DAC10F7413D7C688001B0D3B /* CADemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CADemoAppDelegate.m; sourceTree = "<group>"; };
 		DAC10F7713D7C688001B0D3B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		DAC10F7913D7C688001B0D3B /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
-		DAC10F7A13D7C688001B0D3B /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		DAC10F7D13D7C688001B0D3B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		DAC10F8713D7C781001B0D3B /* CardLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardLayoutView.h; sourceTree = "<group>"; };
+		DAC10F8813D7C781001B0D3B /* CardLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardLayoutView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,12 +60,31 @@
 				DAC10F6513D7C688001B0D3B /* UIKit.framework in Frameworks */,
 				DAC10F6713D7C688001B0D3B /* Foundation.framework in Frameworks */,
 				DAC10F6913D7C688001B0D3B /* CoreGraphics.framework in Frameworks */,
+				DA9C28BB13D9417800EB187D /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA9C28C513DAA0A200EB187D /* Demo Control */ = {
+			isa = PBXGroup;
+			children = (
+				DA9C28C213DA853400EB187D /* DismissControl.m */,
+				DA9C28C313DA853400EB187D /* DismissControl.h */,
+				DAC10F8713D7C781001B0D3B /* CardLayoutView.h */,
+				DAC10F8813D7C781001B0D3B /* CardLayoutView.m */,
+				DAB18E4D13D7E07B0097C9D0 /* CardLayoutViewController.h */,
+				DAB18E4E13D7E07B0097C9D0 /* CardLayoutViewController.m */,
+				DAB18E4F13D7E07B0097C9D0 /* CardLayoutViewController.xib */,
+				DAB18E5313D7E6170097C9D0 /* DemoCardView.h */,
+				DAB18E5413D7E6170097C9D0 /* DemoCardView.m */,
+				DA9C28BD13DA7AFE00EB187D /* SettingsViewController.h */,
+				DA9C28BE13DA7AFE00EB187D /* SettingsViewController.m */,
+			);
+			name = "Demo Control";
+			sourceTree = "<group>";
+		};
 		DAC10F5513D7C688001B0D3B = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +105,7 @@
 		DAC10F6313D7C688001B0D3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA9C28BA13D9417800EB187D /* QuartzCore.framework */,
 				DAC10F6413D7C688001B0D3B /* UIKit.framework */,
 				DAC10F6613D7C688001B0D3B /* Foundation.framework */,
 				DAC10F6813D7C688001B0D3B /* CoreGraphics.framework */,
@@ -79,12 +116,11 @@
 		DAC10F6A13D7C688001B0D3B /* CADemo */ = {
 			isa = PBXGroup;
 			children = (
+				DA9C28C513DAA0A200EB187D /* Demo Control */,
+				DAC10F8613D7C721001B0D3B /* Demo Views */,
 				DAC10F7313D7C688001B0D3B /* CADemoAppDelegate.h */,
 				DAC10F7413D7C688001B0D3B /* CADemoAppDelegate.m */,
 				DAC10F7613D7C688001B0D3B /* MainWindow.xib */,
-				DAC10F7913D7C688001B0D3B /* RootViewController.h */,
-				DAC10F7A13D7C688001B0D3B /* RootViewController.m */,
-				DAC10F7C13D7C688001B0D3B /* RootViewController.xib */,
 				DAC10F6B13D7C688001B0D3B /* Supporting Files */,
 			);
 			path = CADemo;
@@ -99,6 +135,15 @@
 				DAC10F7213D7C688001B0D3B /* CADemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAC10F8613D7C721001B0D3B /* Demo Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA9C28C613DAA10000EB187D /* SublayerTransformView.h */,
+				DA9C28C713DAA10000EB187D /* SublayerTransformView.m */,
+			);
+			name = "Demo Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +198,7 @@
 			files = (
 				DAC10F6F13D7C688001B0D3B /* InfoPlist.strings in Resources */,
 				DAC10F7813D7C688001B0D3B /* MainWindow.xib in Resources */,
-				DAC10F7E13D7C688001B0D3B /* RootViewController.xib in Resources */,
+				DAB18E5113D7E07C0097C9D0 /* CardLayoutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +211,12 @@
 			files = (
 				DAC10F7113D7C688001B0D3B /* main.m in Sources */,
 				DAC10F7513D7C688001B0D3B /* CADemoAppDelegate.m in Sources */,
-				DAC10F7B13D7C688001B0D3B /* RootViewController.m in Sources */,
+				DAC10F8913D7C781001B0D3B /* CardLayoutView.m in Sources */,
+				DAB18E5013D7E07C0097C9D0 /* CardLayoutViewController.m in Sources */,
+				DAB18E5513D7E6170097C9D0 /* DemoCardView.m in Sources */,
+				DA9C28C013DA7AFE00EB187D /* SettingsViewController.m in Sources */,
+				DA9C28C413DA853500EB187D /* DismissControl.m in Sources */,
+				DA9C28C813DAA10000EB187D /* SublayerTransformView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,14 +239,6 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		DAC10F7C13D7C688001B0D3B /* RootViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAC10F7D13D7C688001B0D3B /* en */,
-			);
-			name = RootViewController.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -215,7 +257,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -232,7 +274,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -249,7 +291,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CADemo/CADemo-Prefix.pch";
 				INFOPLIST_FILE = "CADemo/CADemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -260,7 +304,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CADemo/CADemo-Prefix.pch";
 				INFOPLIST_FILE = "CADemo/CADemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -284,6 +330,7 @@
 				DAC10F8313D7C688001B0D3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
