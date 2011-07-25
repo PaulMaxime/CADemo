@@ -38,6 +38,7 @@
 
 @property(nonatomic, retain) UITapGestureRecognizer *tapRecognizer;
 @property(nonatomic, retain) DismissControl *dismissControl;
+@property(nonatomic, retain) UIView *actualDemoView;
 
 @end
 
@@ -48,6 +49,7 @@
 @synthesize tapRecognizer = tapRecognizer_;
 @synthesize dismissControl = dismissControl_;
 @synthesize demoView = demoView_;
+@synthesize actualDemoView = actualDemoView_;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -74,20 +76,29 @@
 - (void)dealloc {
   [tapRecognizer_ release];
   [dismissControl_ release];
+  [demoView_ release];
+  [actualDemoView_ release];
 }
 
 
 - (void)layoutSubviews {
-  demoView_.bounds = self.bounds;
-  demoView_.center = [GraphicsUtils centerOfRect:self.bounds];
+  actualDemoView_.bounds = self.bounds;
+  actualDemoView_.center = [GraphicsUtils centerOfRect:self.bounds];
 }
 
 
-- (void)setDemoView:(UIView *)demoView {
-  [demoView_ removeFromSuperview];
+- (void)setDemoView:(id<DemoCardSubview>)demoView {
   [demoView_ autorelease];
   demoView_ = [demoView retain];
-  [self addSubview:demoView_];
+  [actualDemoView_ autorelease];
+  if ([demoView isKindOfClass:[UIView class]]) {
+    actualDemoView_ = (UIView *)[demoView retain];
+  } else if ([demoView isKindOfClass:[UIViewController class]]) {
+    actualDemoView_ = [((UIViewController *)demoView).view retain];
+  }
+  [actualDemoView_ removeFromSuperview];
+  actualDemoView_.userInteractionEnabled = NO;
+  [self addSubview:actualDemoView_];
   [self setNeedsLayout];
 }
 
@@ -106,8 +117,10 @@
     dismissControl_.center = origin;
     [self.parentController.view insertSubview:dismissControl_
                                  belowSubview:self];
-    [demoView_ setUserInteractionEnabled:YES];
-    [demoView_ startAnimating];
+    [actualDemoView_ setUserInteractionEnabled:YES];
+    if ([demoView_ respondsToSelector:@selector(startAnimating)]) {
+      [demoView_ startAnimating];
+    }
   }
 }
 
@@ -118,7 +131,9 @@
   // Make sure we are the topmost view.
   NSInteger cardCount = [self.parentController.cardViews count];
   [self.parentController.cardLayoutView insertSubview:self atIndex:cardCount - 1];
-  self.parentController.navigationItem.title = demoView_.displayName;
+  if ([demoView_ respondsToSelector:@selector(displayName)]) {
+    self.parentController.navigationItem.title = demoView_.displayName;
+  }
   CGRect layoutFrame = self.parentController.cardLayoutView.frame;
   
   [UIView beginAnimations:@"zoom in" context:NULL];
@@ -137,8 +152,11 @@
 }
 
 - (void)dismissTapped {
-  [demoView_ stopAnimating];
-  [demoView_ setUserInteractionEnabled:NO];
+  self.parentController.navigationItem.title = nil;
+  if ([demoView_ respondsToSelector:@selector(stopAnimating)]) {
+    [demoView_ stopAnimating];
+  }
+  [actualDemoView_ setUserInteractionEnabled:NO];
   [self addGestureRecognizer:tapRecognizer_];
   [dismissControl_ removeFromSuperview];
   CALayer *layer = self.layer;

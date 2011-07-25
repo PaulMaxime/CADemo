@@ -30,14 +30,19 @@
 #import "CardLayoutViewController.h"
 
 #import "DemoCardView.h"
+#import "ImplicitAnimationsViewController.h"
+#import "KeyPathAnimationViewController.h"
 #import "SettingsViewController.h"
 #import "SublayerTransformView.h"
+#import "TransitionViewController.h"
 
 @interface CardLayoutViewController ()
 
 @property(nonatomic, retain) UISegmentedControl *layoutControl;
 @property(nonatomic, retain) UIBarButtonItem *settingsItem;
 @property(nonatomic, retain) UIPopoverController *settingsPopover;
+@property(nonatomic, retain) KeyPathAnimationViewController *keypathDemo;
+@property(nonatomic, retain) ImplicitAnimationsViewController *implicitDemo;
 
 - (void)setParametersForOrientation:(UIInterfaceOrientation)orientation;
 @end
@@ -49,11 +54,14 @@
 @synthesize layoutControl = layoutControl_;
 @synthesize settingsItem = settingsItem_;
 @synthesize settingsPopover = settingsPopover_;
+@synthesize keypathDemo = keypathDemo_;
+@synthesize implicitDemo = implicitDemo_;
 
 - (void)dealloc {
   [cardViews_ release];
   [layoutControl_ release];
   [settingsPopover_ release];
+  [keypathDemo_ release];
   [super dealloc];
 }
 
@@ -95,12 +103,25 @@
   for (int i = 0; i < 12; i++) {
     DemoCardView *cardView = [[[DemoCardView alloc] initWithFrame:cardFrame] autorelease];
     cardView.parentController = self;
-    cardView.demoView = [[UIView alloc] initWithFrame:cardFrame];
-    cardView.demoView.backgroundColor = [UIColor colorWithHue:.6 saturation:.5 brightness:.5 alpha:1];
+    UIView *placeholder = [[UIView alloc] initWithFrame:cardFrame];
+    placeholder.backgroundColor = [UIColor colorWithHue:.6 saturation:.3 brightness:.6 alpha:1.0];
+    cardView.demoView = (id<DemoCardSubview>)placeholder;
     [cardViews_ addObject:cardView];
   }
+  implicitDemo_ = [[ImplicitAnimationsViewController alloc] initWithFrame:cardFrame];
+  ((DemoCardView *)[cardViews_ objectAtIndex:1]).demoView = implicitDemo_;
   ((DemoCardView *)[cardViews_ objectAtIndex:2]).demoView =
       [[SublayerTransformView alloc] initWithFrame:cardFrame];
+  keypathDemo_ = [[KeyPathAnimationViewController alloc] initWithFrame:cardFrame];
+  ((DemoCardView *)[cardViews_ objectAtIndex:3]).demoView = keypathDemo_;
+  ((DemoCardView *)[cardViews_ objectAtIndex:4]).demoView =
+      [[TransitionViewController alloc] initWithFrame:cardFrame];
+  // Grouped animation
+  // movie in a layer
+  // replicator
+  // magnifier
+  // transitions
+  // 
   [cardLayoutView_ setNeedsLayout];
 }
 

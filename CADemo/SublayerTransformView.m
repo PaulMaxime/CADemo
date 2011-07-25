@@ -85,6 +85,7 @@
 - (void)setUp {
 	rootLayer_ = [CALayer layer];
   // Apply perspective transform
+  rootLayer_.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1.0].CGColor;
 	rootLayer_.sublayerTransform = CATransform3DMakePerspective(1500);
 	rootLayer_.frame = self.bounds;
 	[self.layer addSublayer:rootLayer_];

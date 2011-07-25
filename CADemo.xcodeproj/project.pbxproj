@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1C673713DCE61E0097B9F2 /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1C673513DCE61E0097B9F2 /* TransitionViewController.m */; };
+		DA1C673813DCE61E0097B9F2 /* TransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA1C673613DCE61E0097B9F2 /* TransitionViewController.xib */; };
+		DA1C674013DCFF880097B9F2 /* TransitionTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1C673F13DCFF880097B9F2 /* TransitionTypeViewController.m */; };
+		DA1C674313DCFFC00097B9F2 /* TransitionDirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1C674213DCFFC00097B9F2 /* TransitionDirectionViewController.m */; };
+		DA1C675C13DD12D70097B9F2 /* glacier.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA1C675513DD12D70097B9F2 /* glacier.jpg */; };
+		DA1C675D13DD12D70097B9F2 /* moab.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA1C675613DD12D70097B9F2 /* moab.jpg */; };
+		DA1C675E13DD12D70097B9F2 /* paris.JPG in Resources */ = {isa = PBXBuildFile; fileRef = DA1C675713DD12D70097B9F2 /* paris.JPG */; };
+		DA1C675F13DD12D70097B9F2 /* rainbow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA1C675813DD12D70097B9F2 /* rainbow.jpg */; };
+		DA1C676013DD12D70097B9F2 /* redrock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA1C675913DD12D70097B9F2 /* redrock.jpg */; };
+		DA1C676113DD12D70097B9F2 /* rickroll.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA1C675A13DD12D70097B9F2 /* rickroll.mp4 */; };
+		DA1C676213DD12D70097B9F2 /* sydney.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA1C675B13DD12D70097B9F2 /* sydney.jpg */; };
+		DA89A44D13DBE15D00D4C5DC /* ImplicitAnimationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA89A44C13DBE15D00D4C5DC /* ImplicitAnimationsViewController.m */; };
+		DA89A45213DBE2DE00D4C5DC /* ImplicitAnimationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA89A45113DBE2DE00D4C5DC /* ImplicitAnimationsViewController.xib */; };
+		DA93E99C13DB8DC100491AA3 /* KeyPathAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93E99A13DB8DC100491AA3 /* KeyPathAnimationViewController.m */; };
+		DA93E99D13DB8DC100491AA3 /* KeyPathAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA93E99B13DB8DC100491AA3 /* KeyPathAnimationViewController.xib */; };
+		DA93E9A013DB8FA900491AA3 /* KeyPathAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93E99F13DB8FA900491AA3 /* KeyPathAnimationView.m */; };
 		DA9C28BB13D9417800EB187D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9C28BA13D9417800EB187D /* QuartzCore.framework */; };
 		DA9C28C013DA7AFE00EB187D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9C28BE13DA7AFE00EB187D /* SettingsViewController.m */; };
 		DA9C28C413DA853500EB187D /* DismissControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9C28C213DA853400EB187D /* DismissControl.m */; };
@@ -26,6 +42,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA1C673413DCE61E0097B9F2 /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
+		DA1C673513DCE61E0097B9F2 /* TransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
+		DA1C673613DCE61E0097B9F2 /* TransitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransitionViewController.xib; sourceTree = "<group>"; };
+		DA1C673E13DCFF880097B9F2 /* TransitionTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionTypeViewController.h; sourceTree = "<group>"; };
+		DA1C673F13DCFF880097B9F2 /* TransitionTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionTypeViewController.m; sourceTree = "<group>"; };
+		DA1C674113DCFFC00097B9F2 /* TransitionDirectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionDirectionViewController.h; sourceTree = "<group>"; };
+		DA1C674213DCFFC00097B9F2 /* TransitionDirectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionDirectionViewController.m; sourceTree = "<group>"; };
+		DA1C675513DD12D70097B9F2 /* glacier.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = glacier.jpg; sourceTree = "<group>"; };
+		DA1C675613DD12D70097B9F2 /* moab.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moab.jpg; sourceTree = "<group>"; };
+		DA1C675713DD12D70097B9F2 /* paris.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paris.JPG; sourceTree = "<group>"; };
+		DA1C675813DD12D70097B9F2 /* rainbow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rainbow.jpg; sourceTree = "<group>"; };
+		DA1C675913DD12D70097B9F2 /* redrock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = redrock.jpg; sourceTree = "<group>"; };
+		DA1C675A13DD12D70097B9F2 /* rickroll.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rickroll.mp4; sourceTree = "<group>"; };
+		DA1C675B13DD12D70097B9F2 /* sydney.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sydney.jpg; sourceTree = "<group>"; };
+		DA89A44B13DBE15D00D4C5DC /* ImplicitAnimationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImplicitAnimationsViewController.h; sourceTree = "<group>"; };
+		DA89A44C13DBE15D00D4C5DC /* ImplicitAnimationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImplicitAnimationsViewController.m; sourceTree = "<group>"; };
+		DA89A45113DBE2DE00D4C5DC /* ImplicitAnimationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImplicitAnimationsViewController.xib; sourceTree = "<group>"; };
+		DA93E99913DB8DC100491AA3 /* KeyPathAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyPathAnimationViewController.h; sourceTree = "<group>"; };
+		DA93E99A13DB8DC100491AA3 /* KeyPathAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyPathAnimationViewController.m; sourceTree = "<group>"; };
+		DA93E99B13DB8DC100491AA3 /* KeyPathAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyPathAnimationViewController.xib; sourceTree = "<group>"; };
+		DA93E99E13DB8FA900491AA3 /* KeyPathAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyPathAnimationView.h; sourceTree = "<group>"; };
+		DA93E99F13DB8FA900491AA3 /* KeyPathAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyPathAnimationView.m; sourceTree = "<group>"; };
 		DA9C28BA13D9417800EB187D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DA9C28BD13DA7AFE00EB187D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		DA9C28BE13DA7AFE00EB187D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
@@ -70,6 +108,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA1C673A13DCFC680097B9F2 /* Implicit Animation */ = {
+			isa = PBXGroup;
+			children = (
+				DA89A44B13DBE15D00D4C5DC /* ImplicitAnimationsViewController.h */,
+				DA89A44C13DBE15D00D4C5DC /* ImplicitAnimationsViewController.m */,
+				DA89A45113DBE2DE00D4C5DC /* ImplicitAnimationsViewController.xib */,
+			);
+			name = "Implicit Animation";
+			sourceTree = "<group>";
+		};
+		DA1C673B13DCFC7E0097B9F2 /* Sublayer Transform */ = {
+			isa = PBXGroup;
+			children = (
+				DA9C28C613DAA10000EB187D /* SublayerTransformView.h */,
+				DA9C28C713DAA10000EB187D /* SublayerTransformView.m */,
+			);
+			name = "Sublayer Transform";
+			sourceTree = "<group>";
+		};
+		DA1C673C13DCFC930097B9F2 /* Key Path */ = {
+			isa = PBXGroup;
+			children = (
+				DA93E99E13DB8FA900491AA3 /* KeyPathAnimationView.h */,
+				DA93E99F13DB8FA900491AA3 /* KeyPathAnimationView.m */,
+				DA93E99913DB8DC100491AA3 /* KeyPathAnimationViewController.h */,
+				DA93E99A13DB8DC100491AA3 /* KeyPathAnimationViewController.m */,
+				DA93E99B13DB8DC100491AA3 /* KeyPathAnimationViewController.xib */,
+			);
+			name = "Key Path";
+			sourceTree = "<group>";
+		};
+		DA1C673D13DCFF350097B9F2 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				DA1C673413DCE61E0097B9F2 /* TransitionViewController.h */,
+				DA1C673513DCE61E0097B9F2 /* TransitionViewController.m */,
+				DA1C673613DCE61E0097B9F2 /* TransitionViewController.xib */,
+				DA1C673E13DCFF880097B9F2 /* TransitionTypeViewController.h */,
+				DA1C673F13DCFF880097B9F2 /* TransitionTypeViewController.m */,
+				DA1C674113DCFFC00097B9F2 /* TransitionDirectionViewController.h */,
+				DA1C674213DCFFC00097B9F2 /* TransitionDirectionViewController.m */,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
+		DA1C675413DD12D70097B9F2 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				DA1C675513DD12D70097B9F2 /* glacier.jpg */,
+				DA1C675613DD12D70097B9F2 /* moab.jpg */,
+				DA1C675713DD12D70097B9F2 /* paris.JPG */,
+				DA1C675813DD12D70097B9F2 /* rainbow.jpg */,
+				DA1C675913DD12D70097B9F2 /* redrock.jpg */,
+				DA1C675A13DD12D70097B9F2 /* rickroll.mp4 */,
+				DA1C675B13DD12D70097B9F2 /* sydney.jpg */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		DA9C28C513DAA0A200EB187D /* Demo Control */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +216,7 @@
 		DAC10F6A13D7C688001B0D3B /* CADemo */ = {
 			isa = PBXGroup;
 			children = (
+				DA1C675413DD12D70097B9F2 /* Media */,
 				DAD92AD513DB5A1000F0309F /* Utils */,
 				DA9C28C513DAA0A200EB187D /* Demo Control */,
 				DAC10F8613D7C721001B0D3B /* Demo Views */,
@@ -144,8 +242,10 @@
 		DAC10F8613D7C721001B0D3B /* Demo Views */ = {
 			isa = PBXGroup;
 			children = (
-				DA9C28C613DAA10000EB187D /* SublayerTransformView.h */,
-				DA9C28C713DAA10000EB187D /* SublayerTransformView.m */,
+				DA1C673A13DCFC680097B9F2 /* Implicit Animation */,
+				DA1C673B13DCFC7E0097B9F2 /* Sublayer Transform */,
+				DA1C673C13DCFC930097B9F2 /* Key Path */,
+				DA1C673D13DCFF350097B9F2 /* Transition */,
 			);
 			name = "Demo Views";
 			sourceTree = "<group>";
@@ -212,6 +312,16 @@
 				DAC10F6F13D7C688001B0D3B /* InfoPlist.strings in Resources */,
 				DAC10F7813D7C688001B0D3B /* MainWindow.xib in Resources */,
 				DAB18E5113D7E07C0097C9D0 /* CardLayoutViewController.xib in Resources */,
+				DA93E99D13DB8DC100491AA3 /* KeyPathAnimationViewController.xib in Resources */,
+				DA89A45213DBE2DE00D4C5DC /* ImplicitAnimationsViewController.xib in Resources */,
+				DA1C673813DCE61E0097B9F2 /* TransitionViewController.xib in Resources */,
+				DA1C675C13DD12D70097B9F2 /* glacier.jpg in Resources */,
+				DA1C675D13DD12D70097B9F2 /* moab.jpg in Resources */,
+				DA1C675E13DD12D70097B9F2 /* paris.JPG in Resources */,
+				DA1C675F13DD12D70097B9F2 /* rainbow.jpg in Resources */,
+				DA1C676013DD12D70097B9F2 /* redrock.jpg in Resources */,
+				DA1C676113DD12D70097B9F2 /* rickroll.mp4 in Resources */,
+				DA1C676213DD12D70097B9F2 /* sydney.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +341,12 @@
 				DA9C28C413DA853500EB187D /* DismissControl.m in Sources */,
 				DA9C28C813DAA10000EB187D /* SublayerTransformView.m in Sources */,
 				DAD92AD913DB5CDD00F0309F /* GraphicsUtils.m in Sources */,
+				DA93E99C13DB8DC100491AA3 /* KeyPathAnimationViewController.m in Sources */,
+				DA93E9A013DB8FA900491AA3 /* KeyPathAnimationView.m in Sources */,
+				DA89A44D13DBE15D00D4C5DC /* ImplicitAnimationsViewController.m in Sources */,
+				DA1C673713DCE61E0097B9F2 /* TransitionViewController.m in Sources */,
+				DA1C674013DCFF880097B9F2 /* TransitionTypeViewController.m in Sources */,
+				DA1C674313DCFFC00097B9F2 /* TransitionDirectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

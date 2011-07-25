@@ -45,6 +45,6 @@
 
 @property(nonatomic, assign) CardLayoutViewController *parentController;
 @property(nonatomic, assign, getter = isZoomedIn) BOOL zoomedIn;
-@property(nonatomic, retain) UIView<DemoCardSubview> *demoView;
+@property(nonatomic, retain) id<DemoCardSubview> demoView;
 
 @end
