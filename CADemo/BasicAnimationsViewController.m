@@ -49,7 +49,7 @@
         [mainLayer addSublayer:layer];
         [layers_ addObject:layer];
         layer.position = CGPointMake(inset + c * (space + width) + width * 0.5,
-                                     inset + r * (space + width) + width * 0.5);
+                                     44 + inset + r * (space + width) + width * 0.5);
         imageIndex = ++imageIndex % imageCount;
       }
     }

@@ -31,6 +31,8 @@
 
 @interface GraphicsUtils : NSObject
 
++ (CGFloat)clamp:(CGFloat)value from:(CGFloat)minimum to:(CGFloat)maximum;
+
 + (CGFloat)scaleForSize:(CGSize)size inRect:(CGRect)rect;
 
 + (CGRect)centerSize:(CGSize)size inRect:(CGRect)rect;

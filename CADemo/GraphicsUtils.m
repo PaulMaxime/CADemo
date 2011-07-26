@@ -31,6 +31,15 @@
 
 @implementation GraphicsUtils
 
++ (CGFloat)clamp:(CGFloat)value from:(CGFloat)minimum to:(CGFloat)maximum {
+  if (value < minimum) {
+    value = minimum;
+  } else if (value > maximum) {
+    value = maximum;
+  }
+  return value;
+}
+
 + (CGFloat)scaleForSize:(CGSize)size inRect:(CGRect)rect {
   CGFloat hScale = rect.size.width / size.width;
   CGFloat vScale = rect.size.height / size.height;

@@ -34,14 +34,14 @@
 #import "GroupAnimationViewController.h"
 #import "ImplicitAnimationsViewController.h"
 #import "KeyPathAnimationViewController.h"
-#import "SettingsViewController.h"
+#import "MagnifierViewController.h"
+#import "MoviePlayerViewController.h"
 #import "SublayerTransformView.h"
 #import "TransitionViewController.h"
 
 @interface CardLayoutViewController ()
 
 @property(nonatomic, retain) UISegmentedControl *layoutControl;
-@property(nonatomic, retain) UIBarButtonItem *settingsItem;
 @property(nonatomic, retain) UIPopoverController *settingsPopover;
 @property(nonatomic, retain) KeyPathAnimationViewController *keypathDemo;
 @property(nonatomic, retain) ImplicitAnimationsViewController *implicitDemo;
@@ -54,7 +54,6 @@
 @synthesize cardViews = cardViews_;
 @synthesize cardLayoutView = cardLayoutView_;
 @synthesize layoutControl = layoutControl_;
-@synthesize settingsItem = settingsItem_;
 @synthesize settingsPopover = settingsPopover_;
 @synthesize keypathDemo = keypathDemo_;
 @synthesize implicitDemo = implicitDemo_;
@@ -90,19 +89,13 @@
                                                                          action:nil];
   UIBarButtonItem *layoutItem = [[[UIBarButtonItem alloc] initWithCustomView:layoutControl_]
                                   autorelease];
-  self.toolbarItems = [NSArray arrayWithObjects:space, layoutItem, space, nil];
-  [self.navigationController setToolbarHidden:NO animated:NO];
   
-  settingsItem_ = [[UIBarButtonItem alloc] initWithTitle:@"Settings"
-                                                   style:UIBarButtonItemStylePlain
-                                                  target:self
-                                                  action:@selector(loadSettingsPopover)];
-  self.navigationItem.rightBarButtonItem = settingsItem_;
+  self.navigationItem.rightBarButtonItem = layoutItem;
   
   // Every view is always sized to fit the screen. If it's shrunk, it's due to the view transform.
   CGRect layoutFrame = cardLayoutView_.frame;
   CGRect cardFrame = CGRectMake(0, 0, layoutFrame.size.width - 40, layoutFrame.size.height - 148);
-  for (int i = 0; i < 12; i++) {
+  for (int i = 0; i < 8; i++) {
     DemoCardView *cardView = [[[DemoCardView alloc] initWithFrame:cardFrame] autorelease];
     cardView.parentController = self;
     UIView *placeholder = [[UIView alloc] initWithFrame:cardFrame];
@@ -113,29 +106,35 @@
   // 0 is implicit animations.
   implicitDemo_ = [[ImplicitAnimationsViewController alloc] initWithFrame:cardFrame];
   ((DemoCardView *)[cardViews_ objectAtIndex:0]).demoView = implicitDemo_;
+  
   // 1 is basic demo.
   ((DemoCardView *)[cardViews_ objectAtIndex:1]).demoView =
-  [[BasicAnimationsViewController alloc] initWithFrame:cardFrame];
+      [[BasicAnimationsViewController alloc] initWithFrame:cardFrame];
+  
   // 2 is keyframe demo.
   keypathDemo_ = [[KeyPathAnimationViewController alloc] initWithFrame:cardFrame];
   ((DemoCardView *)[cardViews_ objectAtIndex:2]).demoView = keypathDemo_;
-  // 3 is grouped/composite.
+
+  // 3 is 3D/Sublayer
   ((DemoCardView *)[cardViews_ objectAtIndex:3]).demoView =
-      [[GroupAnimationViewController alloc] initWithFrame:cardFrame];
-  // 4 is transitions.
-  ((DemoCardView *)[cardViews_ objectAtIndex:4]).demoView =
-  [[TransitionViewController alloc] initWithFrame:cardFrame];
-  // 5 is 3D/Sublayer
-  ((DemoCardView *)[cardViews_ objectAtIndex:5]).demoView =
       [[SublayerTransformView alloc] initWithFrame:cardFrame];
   
+  // 4 is grouped/composite.
+  ((DemoCardView *)[cardViews_ objectAtIndex:4]).demoView =
+      [[GroupAnimationViewController alloc] initWithFrame:cardFrame];
+  
+  // 3 is transitions.
+  ((DemoCardView *)[cardViews_ objectAtIndex:5]).demoView =
+      [[TransitionViewController alloc] initWithFrame:cardFrame];
+  
   // 6 movie in a layer
-  // 7 replicator
-  // 8 magnifier
-  // 9 tooltip
-  // 10 jack.
-  // 11 - menu selection UI?
-  // 12 ???
+  ((DemoCardView *)[cardViews_ objectAtIndex:6]).demoView =
+      [[MoviePlayerViewController alloc] initWithFrame:cardFrame];
+  
+  // 7 magnifier
+  ((DemoCardView *)[cardViews_ objectAtIndex:7]).demoView =
+      [[MagnifierViewController alloc] initWithFrame:cardFrame];  
+  
   [cardLayoutView_ setNeedsLayout];
 }
 
@@ -156,28 +155,16 @@
   [cardLayoutView_ setNeedsLayout];
 }
 
-- (void)loadSettingsPopover {
-  if (!settingsPopover_) {
-    SettingsViewController *settingsController = [[SettingsViewController alloc] init];
-    settingsPopover_ = [[UIPopoverController alloc]
-        initWithContentViewController:settingsController];
-  }
-  [settingsPopover_ presentPopoverFromBarButtonItem:settingsItem_
-                           permittedArrowDirections:UIPopoverArrowDirectionAny
-                                           animated:YES];
-  
-}
-
 #pragma mark -
 #pragma mark User interface rotation.
 
 - (void)setParametersForOrientation:(UIInterfaceOrientation)orientation {
   if (UIInterfaceOrientationIsPortrait(orientation)) {
-    cardLayoutView_.rows = 4;
+    cardLayoutView_.rows = 3;
     cardLayoutView_.columns = 3;
   } else if (UIInterfaceOrientationIsLandscape(orientation)) {
     cardLayoutView_.rows = 3;
-    cardLayoutView_.columns = 4;
+    cardLayoutView_.columns = 3;
   }
 }
 
