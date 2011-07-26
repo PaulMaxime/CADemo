@@ -19,6 +19,11 @@
 		DA1C676113DD12D70097B9F2 /* rickroll.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA1C675A13DD12D70097B9F2 /* rickroll.mp4 */; };
 		DA1C676213DD12D70097B9F2 /* sydney.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA1C675B13DD12D70097B9F2 /* sydney.jpg */; };
 		DA1C676413DD25500097B9F2 /* Wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = DA1C676313DD25500097B9F2 /* Wheel.png */; };
+		DA24225913DE67950029471A /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA24225813DE67950029471A /* MoviePlayerViewController.m */; };
+		DA24225B13DE6B230029471A /* MoviePlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA24225A13DE6B230029471A /* MoviePlayerViewController.xib */; };
+		DA24225D13DE6EA30029471A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA24225C13DE6EA30029471A /* AVFoundation.framework */; };
+		DA24226313DE7A6B0029471A /* MagnifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA24225F13DE7A6B0029471A /* MagnifierViewController.m */; };
+		DA24226413DE7A6B0029471A /* MagnifierView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA24226113DE7A6B0029471A /* MagnifierView.m */; };
 		DA344EA113DE424000E1929F /* Browser.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9513DE424000E1929F /* Browser.png */; };
 		DA344EA213DE424000E1929F /* Calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9613DE424000E1929F /* Calculator.png */; };
 		DA344EA313DE424000E1929F /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9713DE424000E1929F /* Calendar.png */; };
@@ -41,7 +46,6 @@
 		DA93E99D13DB8DC100491AA3 /* KeyPathAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA93E99B13DB8DC100491AA3 /* KeyPathAnimationViewController.xib */; };
 		DA93E9A013DB8FA900491AA3 /* KeyPathAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93E99F13DB8FA900491AA3 /* KeyPathAnimationView.m */; };
 		DA9C28BB13D9417800EB187D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9C28BA13D9417800EB187D /* QuartzCore.framework */; };
-		DA9C28C013DA7AFE00EB187D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9C28BE13DA7AFE00EB187D /* SettingsViewController.m */; };
 		DA9C28C413DA853500EB187D /* DismissControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9C28C213DA853400EB187D /* DismissControl.m */; };
 		DA9C28C813DAA10000EB187D /* SublayerTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9C28C713DAA10000EB187D /* SublayerTransformView.m */; };
 		DAB18E5013D7E07C0097C9D0 /* CardLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB18E4E13D7E07B0097C9D0 /* CardLayoutViewController.m */; };
@@ -74,6 +78,14 @@
 		DA1C675A13DD12D70097B9F2 /* rickroll.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rickroll.mp4; sourceTree = "<group>"; };
 		DA1C675B13DD12D70097B9F2 /* sydney.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sydney.jpg; sourceTree = "<group>"; };
 		DA1C676313DD25500097B9F2 /* Wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wheel.png; sourceTree = "<group>"; };
+		DA24225713DE67950029471A /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
+		DA24225813DE67950029471A /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
+		DA24225A13DE6B230029471A /* MoviePlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviePlayerViewController.xib; sourceTree = "<group>"; };
+		DA24225C13DE6EA30029471A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DA24225F13DE7A6B0029471A /* MagnifierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagnifierViewController.m; sourceTree = "<group>"; };
+		DA24226013DE7A6B0029471A /* MagnifierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagnifierViewController.h; sourceTree = "<group>"; };
+		DA24226113DE7A6B0029471A /* MagnifierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagnifierView.m; sourceTree = "<group>"; };
+		DA24226213DE7A6B0029471A /* MagnifierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagnifierView.h; sourceTree = "<group>"; };
 		DA344E9513DE424000E1929F /* Browser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Browser.png; sourceTree = "<group>"; };
 		DA344E9613DE424000E1929F /* Calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calculator.png; sourceTree = "<group>"; };
 		DA344E9713DE424000E1929F /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
@@ -101,8 +113,6 @@
 		DA93E99E13DB8FA900491AA3 /* KeyPathAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyPathAnimationView.h; sourceTree = "<group>"; };
 		DA93E99F13DB8FA900491AA3 /* KeyPathAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyPathAnimationView.m; sourceTree = "<group>"; };
 		DA9C28BA13D9417800EB187D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		DA9C28BD13DA7AFE00EB187D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		DA9C28BE13DA7AFE00EB187D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		DA9C28C213DA853400EB187D /* DismissControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissControl.m; sourceTree = "<group>"; };
 		DA9C28C313DA853400EB187D /* DismissControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissControl.h; sourceTree = "<group>"; };
 		DA9C28C613DAA10000EB187D /* SublayerTransformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SublayerTransformView.h; sourceTree = "<group>"; };
@@ -138,6 +148,7 @@
 				DAC10F6713D7C688001B0D3B /* Foundation.framework in Frameworks */,
 				DAC10F6913D7C688001B0D3B /* CoreGraphics.framework in Frameworks */,
 				DA9C28BB13D9417800EB187D /* QuartzCore.framework in Frameworks */,
+				DA24225D13DE6EA30029471A /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +227,27 @@
 			path = Media;
 			sourceTree = "<group>";
 		};
+		DA24225513DE676D0029471A /* MoviePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				DA24225713DE67950029471A /* MoviePlayerViewController.h */,
+				DA24225813DE67950029471A /* MoviePlayerViewController.m */,
+				DA24225A13DE6B230029471A /* MoviePlayerViewController.xib */,
+			);
+			name = MoviePlayer;
+			sourceTree = "<group>";
+		};
+		DA24225E13DE75D20029471A /* Magnifier */ = {
+			isa = PBXGroup;
+			children = (
+				DA24225F13DE7A6B0029471A /* MagnifierViewController.m */,
+				DA24226013DE7A6B0029471A /* MagnifierViewController.h */,
+				DA24226113DE7A6B0029471A /* MagnifierView.m */,
+				DA24226213DE7A6B0029471A /* MagnifierView.h */,
+			);
+			name = Magnifier;
+			sourceTree = "<group>";
+		};
 		DA344EAE13DE425500E1929F /* Basic Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,8 +280,6 @@
 				DAB18E4F13D7E07B0097C9D0 /* CardLayoutViewController.xib */,
 				DAB18E5313D7E6170097C9D0 /* DemoCardView.h */,
 				DAB18E5413D7E6170097C9D0 /* DemoCardView.m */,
-				DA9C28BD13DA7AFE00EB187D /* SettingsViewController.h */,
-				DA9C28BE13DA7AFE00EB187D /* SettingsViewController.m */,
 			);
 			name = "Demo Control";
 			sourceTree = "<group>";
@@ -274,6 +304,7 @@
 		DAC10F6313D7C688001B0D3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA24225C13DE6EA30029471A /* AVFoundation.framework */,
 				DA9C28BA13D9417800EB187D /* QuartzCore.framework */,
 				DAC10F6413D7C688001B0D3B /* UIKit.framework */,
 				DAC10F6613D7C688001B0D3B /* Foundation.framework */,
@@ -311,6 +342,8 @@
 		DAC10F8613D7C721001B0D3B /* Demo Views */ = {
 			isa = PBXGroup;
 			children = (
+				DA24225E13DE75D20029471A /* Magnifier */,
+				DA24225513DE676D0029471A /* MoviePlayer */,
 				DA344EB413DE555D00E1929F /* GroupAnimation */,
 				DA344EAE13DE425500E1929F /* Basic Animation */,
 				DA1C673A13DCFC680097B9F2 /* Implicit Animation */,
@@ -408,6 +441,7 @@
 				DA344EAC13DE424000E1929F /* Weather.png in Resources */,
 				DA344EB313DE42A700E1929F /* BasicAnimationsViewController.xib in Resources */,
 				DA344EBE13DE576500E1929F /* GroupAnimationViewController.xib in Resources */,
+				DA24225B13DE6B230029471A /* MoviePlayerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +457,6 @@
 				DAC10F8913D7C781001B0D3B /* CardLayoutView.m in Sources */,
 				DAB18E5013D7E07C0097C9D0 /* CardLayoutViewController.m in Sources */,
 				DAB18E5513D7E6170097C9D0 /* DemoCardView.m in Sources */,
-				DA9C28C013DA7AFE00EB187D /* SettingsViewController.m in Sources */,
 				DA9C28C413DA853500EB187D /* DismissControl.m in Sources */,
 				DA9C28C813DAA10000EB187D /* SublayerTransformView.m in Sources */,
 				DAD92AD913DB5CDD00F0309F /* GraphicsUtils.m in Sources */,
@@ -435,6 +468,9 @@
 				DA1C674313DCFFC00097B9F2 /* TransitionDirectionViewController.m in Sources */,
 				DA344EB213DE42A700E1929F /* BasicAnimationsViewController.m in Sources */,
 				DA344EBD13DE576500E1929F /* GroupAnimationViewController.m in Sources */,
+				DA24225913DE67950029471A /* MoviePlayerViewController.m in Sources */,
+				DA24226313DE7A6B0029471A /* MagnifierViewController.m in Sources */,
+				DA24226413DE7A6B0029471A /* MagnifierView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

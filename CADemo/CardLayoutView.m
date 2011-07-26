@@ -99,7 +99,7 @@
                              size.height - subviewSize_.height - inset_.height);
   
   // This is pure laziness. I should figure out the correct size based on the screen size.
-  subviewSize_ = CGSizeMake(125, 125);
+  subviewSize_ = CGSizeMake(175, 175);
 
   NSArray *newViews = [self viewsFromDataSource];
   CGFloat angle = 2 * M_PI / [newViews count];
