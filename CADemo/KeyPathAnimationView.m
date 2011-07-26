@@ -64,18 +64,20 @@
     CALayer *layer = self.layer;
     
     if (self.movingLayer) {
-      [movingLayer_ removeFromSuperlayer];
+      [self.movingLayer removeFromSuperlayer];
     }
     self.movingLayer = [CALayer layer];
-    self.movingLayer.bounds = CGRectMake(0, 0, 60, 60);
-    self.movingLayer.cornerRadius = 10;
-    self.movingLayer.backgroundColor = [UIColor redColor].CGColor;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Wheel" ofType:@"png"];
+    CGImageRef imageRef = [UIImage imageWithContentsOfFile:path].CGImage;
+    self.movingLayer.contents = (id)imageRef;
+    self.movingLayer.bounds = CGRectMake(0, 0, CGImageGetWidth(imageRef), CGImageGetHeight(imageRef));
     self.movingLayer.position = [[touchPoints_ objectAtIndex:0] CGPointValue];
-    [layer addSublayer:self.movingLayer];
     
+    [layer addSublayer:self.movingLayer];
+
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     animation.removedOnCompletion = YES;
-    animation.duration = 0.5 * points;
+    animation.duration = 0.3 * points;
     animation.calculationMode = kCAAnimationCubicPaced;
     animation.rotationMode = kCAAnimationRotateAuto;
     animation.values = touchPoints_;

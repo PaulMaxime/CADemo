@@ -1,7 +1,11 @@
 //
+//  BasicAnimationsViewController.h
+//  CADemo
+//
+//  Created by Paul Franceus on 7/25/11. Thanks for inspiration to BobMcCune http://bobmccune.com
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2011 Paul Franceus
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal

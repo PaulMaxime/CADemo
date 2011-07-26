@@ -18,6 +18,23 @@
 		DA1C676013DD12D70097B9F2 /* redrock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA1C675913DD12D70097B9F2 /* redrock.jpg */; };
 		DA1C676113DD12D70097B9F2 /* rickroll.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA1C675A13DD12D70097B9F2 /* rickroll.mp4 */; };
 		DA1C676213DD12D70097B9F2 /* sydney.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA1C675B13DD12D70097B9F2 /* sydney.jpg */; };
+		DA1C676413DD25500097B9F2 /* Wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = DA1C676313DD25500097B9F2 /* Wheel.png */; };
+		DA344EA113DE424000E1929F /* Browser.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9513DE424000E1929F /* Browser.png */; };
+		DA344EA213DE424000E1929F /* Calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9613DE424000E1929F /* Calculator.png */; };
+		DA344EA313DE424000E1929F /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9713DE424000E1929F /* Calendar.png */; };
+		DA344EA413DE424000E1929F /* Chat.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9813DE424000E1929F /* Chat.png */; };
+		DA344EA513DE424000E1929F /* Clock.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9913DE424000E1929F /* Clock.png */; };
+		DA344EA613DE424000E1929F /* Graph.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9A13DE424000E1929F /* Graph.png */; };
+		DA344EA713DE424000E1929F /* iPod.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9B13DE424000E1929F /* iPod.png */; };
+		DA344EA813DE424000E1929F /* Maps.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9C13DE424000E1929F /* Maps.png */; };
+		DA344EA913DE424000E1929F /* Notes.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9D13DE424000E1929F /* Notes.png */; };
+		DA344EAA13DE424000E1929F /* Phone.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9E13DE424000E1929F /* Phone.png */; };
+		DA344EAB13DE424000E1929F /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344E9F13DE424000E1929F /* Settings.png */; };
+		DA344EAC13DE424000E1929F /* Weather.png in Resources */ = {isa = PBXBuildFile; fileRef = DA344EA013DE424000E1929F /* Weather.png */; };
+		DA344EB213DE42A700E1929F /* BasicAnimationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA344EB013DE42A700E1929F /* BasicAnimationsViewController.m */; };
+		DA344EB313DE42A700E1929F /* BasicAnimationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA344EB113DE42A700E1929F /* BasicAnimationsViewController.xib */; };
+		DA344EBD13DE576500E1929F /* GroupAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA344EBB13DE576500E1929F /* GroupAnimationViewController.m */; };
+		DA344EBE13DE576500E1929F /* GroupAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA344EBC13DE576500E1929F /* GroupAnimationViewController.xib */; };
 		DA89A44D13DBE15D00D4C5DC /* ImplicitAnimationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA89A44C13DBE15D00D4C5DC /* ImplicitAnimationsViewController.m */; };
 		DA89A45213DBE2DE00D4C5DC /* ImplicitAnimationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA89A45113DBE2DE00D4C5DC /* ImplicitAnimationsViewController.xib */; };
 		DA93E99C13DB8DC100491AA3 /* KeyPathAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93E99A13DB8DC100491AA3 /* KeyPathAnimationViewController.m */; };
@@ -56,6 +73,25 @@
 		DA1C675913DD12D70097B9F2 /* redrock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = redrock.jpg; sourceTree = "<group>"; };
 		DA1C675A13DD12D70097B9F2 /* rickroll.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rickroll.mp4; sourceTree = "<group>"; };
 		DA1C675B13DD12D70097B9F2 /* sydney.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sydney.jpg; sourceTree = "<group>"; };
+		DA1C676313DD25500097B9F2 /* Wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wheel.png; sourceTree = "<group>"; };
+		DA344E9513DE424000E1929F /* Browser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Browser.png; sourceTree = "<group>"; };
+		DA344E9613DE424000E1929F /* Calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calculator.png; sourceTree = "<group>"; };
+		DA344E9713DE424000E1929F /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
+		DA344E9813DE424000E1929F /* Chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chat.png; sourceTree = "<group>"; };
+		DA344E9913DE424000E1929F /* Clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clock.png; sourceTree = "<group>"; };
+		DA344E9A13DE424000E1929F /* Graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Graph.png; sourceTree = "<group>"; };
+		DA344E9B13DE424000E1929F /* iPod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPod.png; sourceTree = "<group>"; };
+		DA344E9C13DE424000E1929F /* Maps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Maps.png; sourceTree = "<group>"; };
+		DA344E9D13DE424000E1929F /* Notes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Notes.png; sourceTree = "<group>"; };
+		DA344E9E13DE424000E1929F /* Phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phone.png; sourceTree = "<group>"; };
+		DA344E9F13DE424000E1929F /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		DA344EA013DE424000E1929F /* Weather.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Weather.png; sourceTree = "<group>"; };
+		DA344EAF13DE42A700E1929F /* BasicAnimationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationsViewController.h; sourceTree = "<group>"; };
+		DA344EB013DE42A700E1929F /* BasicAnimationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationsViewController.m; sourceTree = "<group>"; };
+		DA344EB113DE42A700E1929F /* BasicAnimationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicAnimationsViewController.xib; sourceTree = "<group>"; };
+		DA344EBA13DE576500E1929F /* GroupAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupAnimationViewController.h; sourceTree = "<group>"; };
+		DA344EBB13DE576500E1929F /* GroupAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupAnimationViewController.m; sourceTree = "<group>"; };
+		DA344EBC13DE576500E1929F /* GroupAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupAnimationViewController.xib; sourceTree = "<group>"; };
 		DA89A44B13DBE15D00D4C5DC /* ImplicitAnimationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImplicitAnimationsViewController.h; sourceTree = "<group>"; };
 		DA89A44C13DBE15D00D4C5DC /* ImplicitAnimationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImplicitAnimationsViewController.m; sourceTree = "<group>"; };
 		DA89A45113DBE2DE00D4C5DC /* ImplicitAnimationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImplicitAnimationsViewController.xib; sourceTree = "<group>"; };
@@ -156,6 +192,19 @@
 		DA1C675413DD12D70097B9F2 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				DA344E9513DE424000E1929F /* Browser.png */,
+				DA344E9613DE424000E1929F /* Calculator.png */,
+				DA344E9713DE424000E1929F /* Calendar.png */,
+				DA344E9813DE424000E1929F /* Chat.png */,
+				DA344E9913DE424000E1929F /* Clock.png */,
+				DA344E9A13DE424000E1929F /* Graph.png */,
+				DA344E9B13DE424000E1929F /* iPod.png */,
+				DA344E9C13DE424000E1929F /* Maps.png */,
+				DA344E9D13DE424000E1929F /* Notes.png */,
+				DA344E9E13DE424000E1929F /* Phone.png */,
+				DA344E9F13DE424000E1929F /* Settings.png */,
+				DA344EA013DE424000E1929F /* Weather.png */,
+				DA1C676313DD25500097B9F2 /* Wheel.png */,
 				DA1C675513DD12D70097B9F2 /* glacier.jpg */,
 				DA1C675613DD12D70097B9F2 /* moab.jpg */,
 				DA1C675713DD12D70097B9F2 /* paris.JPG */,
@@ -165,6 +214,26 @@
 				DA1C675B13DD12D70097B9F2 /* sydney.jpg */,
 			);
 			path = Media;
+			sourceTree = "<group>";
+		};
+		DA344EAE13DE425500E1929F /* Basic Animation */ = {
+			isa = PBXGroup;
+			children = (
+				DA344EAF13DE42A700E1929F /* BasicAnimationsViewController.h */,
+				DA344EB013DE42A700E1929F /* BasicAnimationsViewController.m */,
+				DA344EB113DE42A700E1929F /* BasicAnimationsViewController.xib */,
+			);
+			name = "Basic Animation";
+			sourceTree = "<group>";
+		};
+		DA344EB413DE555D00E1929F /* GroupAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				DA344EBA13DE576500E1929F /* GroupAnimationViewController.h */,
+				DA344EBB13DE576500E1929F /* GroupAnimationViewController.m */,
+				DA344EBC13DE576500E1929F /* GroupAnimationViewController.xib */,
+			);
+			name = GroupAnimation;
 			sourceTree = "<group>";
 		};
 		DA9C28C513DAA0A200EB187D /* Demo Control */ = {
@@ -242,6 +311,8 @@
 		DAC10F8613D7C721001B0D3B /* Demo Views */ = {
 			isa = PBXGroup;
 			children = (
+				DA344EB413DE555D00E1929F /* GroupAnimation */,
+				DA344EAE13DE425500E1929F /* Basic Animation */,
 				DA1C673A13DCFC680097B9F2 /* Implicit Animation */,
 				DA1C673B13DCFC7E0097B9F2 /* Sublayer Transform */,
 				DA1C673C13DCFC930097B9F2 /* Key Path */,
@@ -322,6 +393,21 @@
 				DA1C676013DD12D70097B9F2 /* redrock.jpg in Resources */,
 				DA1C676113DD12D70097B9F2 /* rickroll.mp4 in Resources */,
 				DA1C676213DD12D70097B9F2 /* sydney.jpg in Resources */,
+				DA1C676413DD25500097B9F2 /* Wheel.png in Resources */,
+				DA344EA113DE424000E1929F /* Browser.png in Resources */,
+				DA344EA213DE424000E1929F /* Calculator.png in Resources */,
+				DA344EA313DE424000E1929F /* Calendar.png in Resources */,
+				DA344EA413DE424000E1929F /* Chat.png in Resources */,
+				DA344EA513DE424000E1929F /* Clock.png in Resources */,
+				DA344EA613DE424000E1929F /* Graph.png in Resources */,
+				DA344EA713DE424000E1929F /* iPod.png in Resources */,
+				DA344EA813DE424000E1929F /* Maps.png in Resources */,
+				DA344EA913DE424000E1929F /* Notes.png in Resources */,
+				DA344EAA13DE424000E1929F /* Phone.png in Resources */,
+				DA344EAB13DE424000E1929F /* Settings.png in Resources */,
+				DA344EAC13DE424000E1929F /* Weather.png in Resources */,
+				DA344EB313DE42A700E1929F /* BasicAnimationsViewController.xib in Resources */,
+				DA344EBE13DE576500E1929F /* GroupAnimationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +433,8 @@
 				DA1C673713DCE61E0097B9F2 /* TransitionViewController.m in Sources */,
 				DA1C674013DCFF880097B9F2 /* TransitionTypeViewController.m in Sources */,
 				DA1C674313DCFFC00097B9F2 /* TransitionDirectionViewController.m in Sources */,
+				DA344EB213DE42A700E1929F /* BasicAnimationsViewController.m in Sources */,
+				DA344EBD13DE576500E1929F /* GroupAnimationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -50,23 +50,23 @@
 						<string key="NSFrame">{{0, -5}, {768, 44}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="886501775"/>
+						<reference key="NSNextKeyView" ref="991131398"/>
 						<string key="NSReuseIdentifierKey">_NS:345</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSMutableArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBUIBarButtonItem" id="945745118">
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<reference key="IBUIToolbar" ref="870544784"/>
+								<int key="IBUISystemItemIdentifier">5</int>
+							</object>
 							<object class="IBUIBarButtonItem" id="271401103">
 								<string key="IBUITitle">Transition</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="870544784"/>
-							</object>
-							<object class="IBUIBarButtonItem" id="945745118">
-								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<reference key="IBUIToolbar" ref="870544784"/>
-								<int key="IBUISystemItemIdentifier">5</int>
 							</object>
 							<object class="IBUIBarButtonItem" id="486978694">
 								<string key="IBUITitle">Direction</string>
@@ -76,7 +76,7 @@
 							</object>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="886501775">
+					<object class="IBUIImageView" id="991131398">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">282</int>
 						<string key="NSFrame">{{0, 39}, {768, 965}}</string>
@@ -153,7 +153,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">imageView</string>
 						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="886501775"/>
+						<reference key="destination" ref="991131398"/>
 					</object>
 					<int key="connectionID">17</int>
 				</object>
@@ -192,7 +192,7 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="870544784"/>
-							<reference ref="886501775"/>
+							<reference ref="991131398"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -224,7 +224,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">16</int>
-						<reference key="object" ref="886501775"/>
+						<reference key="object" ref="991131398"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 				</object>

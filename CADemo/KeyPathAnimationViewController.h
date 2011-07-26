@@ -15,7 +15,7 @@
 @interface KeyPathAnimationViewController : UIViewController <DemoCardSubview>
  
 
-@property (nonatomic, retain) IBOutlet UIButton *goButton;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *goButton;
 @property (nonatomic, retain) IBOutlet KeyPathAnimationView *keyPathView;
 
 

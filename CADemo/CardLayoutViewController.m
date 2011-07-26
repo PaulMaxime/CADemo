@@ -30,6 +30,8 @@
 #import "CardLayoutViewController.h"
 
 #import "DemoCardView.h"
+#import "BasicAnimationsViewController.h"
+#import "GroupAnimationViewController.h"
 #import "ImplicitAnimationsViewController.h"
 #import "KeyPathAnimationViewController.h"
 #import "SettingsViewController.h"
@@ -108,20 +110,32 @@
     cardView.demoView = (id<DemoCardSubview>)placeholder;
     [cardViews_ addObject:cardView];
   }
+  // 0 is implicit animations.
   implicitDemo_ = [[ImplicitAnimationsViewController alloc] initWithFrame:cardFrame];
-  ((DemoCardView *)[cardViews_ objectAtIndex:1]).demoView = implicitDemo_;
-  ((DemoCardView *)[cardViews_ objectAtIndex:2]).demoView =
-      [[SublayerTransformView alloc] initWithFrame:cardFrame];
+  ((DemoCardView *)[cardViews_ objectAtIndex:0]).demoView = implicitDemo_;
+  // 1 is basic demo.
+  ((DemoCardView *)[cardViews_ objectAtIndex:1]).demoView =
+  [[BasicAnimationsViewController alloc] initWithFrame:cardFrame];
+  // 2 is keyframe demo.
   keypathDemo_ = [[KeyPathAnimationViewController alloc] initWithFrame:cardFrame];
-  ((DemoCardView *)[cardViews_ objectAtIndex:3]).demoView = keypathDemo_;
+  ((DemoCardView *)[cardViews_ objectAtIndex:2]).demoView = keypathDemo_;
+  // 3 is grouped/composite.
+  ((DemoCardView *)[cardViews_ objectAtIndex:3]).demoView =
+      [[GroupAnimationViewController alloc] initWithFrame:cardFrame];
+  // 4 is transitions.
   ((DemoCardView *)[cardViews_ objectAtIndex:4]).demoView =
-      [[TransitionViewController alloc] initWithFrame:cardFrame];
-  // Grouped animation
-  // movie in a layer
-  // replicator
-  // magnifier
-  // transitions
-  // 
+  [[TransitionViewController alloc] initWithFrame:cardFrame];
+  // 5 is 3D/Sublayer
+  ((DemoCardView *)[cardViews_ objectAtIndex:5]).demoView =
+      [[SublayerTransformView alloc] initWithFrame:cardFrame];
+  
+  // 6 movie in a layer
+  // 7 replicator
+  // 8 magnifier
+  // 9 tooltip
+  // 10 jack.
+  // 11 - menu selection UI?
+  // 12 ???
   [cardLayoutView_ setNeedsLayout];
 }
 
