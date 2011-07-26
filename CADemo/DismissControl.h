@@ -1,5 +1,5 @@
 //
-//  GIPDismissControl.h
+//  DismissControl.h
 //
 //  Created by Paul Franceus on 7/20/11.
 //

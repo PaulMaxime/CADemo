@@ -84,9 +84,6 @@
                     action:@selector(updateLayout)
           forControlEvents:UIControlEventValueChanged];
 
-  UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-                                                                         target:nil
-                                                                         action:nil];
   UIBarButtonItem *layoutItem = [[[UIBarButtonItem alloc] initWithCustomView:layoutControl_]
                                   autorelease];
   

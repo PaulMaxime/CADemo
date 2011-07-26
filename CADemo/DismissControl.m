@@ -1,5 +1,5 @@
 //
-//  GIPDismissControl.m
+//  DismissControl.m
 //
 //  Created by Paul Franceus on 7/20/11.
 //

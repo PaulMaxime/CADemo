@@ -121,12 +121,12 @@
   
   images_ = [[NSArray arrayWithObjects:@"glacier.jpg", @"moab.jpg", @"paris.JPG", @"rainbow.jpg", 
              @"redrock.jpg", @"sydney.jpg", nil] retain];
-  self.typeViewController = [[TransitionTypeViewController alloc] init];
+  self.typeViewController = [[[TransitionTypeViewController alloc] init] autorelease];
   self.typeViewController.delegate = self;
   self.typePopover = [[[UIPopoverController alloc]
                       initWithContentViewController:self.typeViewController] autorelease];
   
-  self.directionViewController = [[TransitionDirectionViewController alloc] init];
+  self.directionViewController = [[[TransitionDirectionViewController alloc] init] autorelease];
   self.directionViewController.delegate = self;
   self.directionPopover = [[[UIPopoverController alloc]
                             initWithContentViewController:self.directionViewController] autorelease];
